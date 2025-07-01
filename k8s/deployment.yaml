@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: deployment
+  name: deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: deployment
+    spec:
+      containers:
+      - image: 585768168578.dkr.ecr.us-east-1.amazonaws.com/exam-repo:nodeapp
+        name: exam-repo
+        resources: {}
+status: {}
